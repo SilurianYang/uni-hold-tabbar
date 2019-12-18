@@ -14,6 +14,9 @@
 		onLoad() {
 
 		},
+		onTabEvent(type){
+			console.log(type)
+		},
 		methods: {
 
 		}

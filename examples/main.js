@@ -5,13 +5,21 @@ Vue.config.productionTip = false
 
 App.mpType = 'app'
 
-import HoldTabbar  from '@/common/HoldTabbar/index'
+ import HoldTabbar  from '@/common/tabbar-hold-bundle.js'
 
-new HoldTabbar({
+Vue.prototype.$holdTab=new HoldTabbar({
+	registerPageHook:true,
+	style:{
+		backgroundColor:'#FF0000',
+		opacity:1
+	},
 	event:{
-		click:(index,{pagePath})=>{
+		click:(index,{pagePath},next)=>{
 			uni.switchTab({
-				url:`/${pagePath}`
+				url:`/${pagePath}`,
+				complete() {
+					next();
+				}
 			})
 		},	
 	}

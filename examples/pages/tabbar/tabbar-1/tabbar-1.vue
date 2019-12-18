@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
 		页面 - 1
+		<button type="primary" @click="gotoPage">去下一个页面</button>
 		<div class="box">
 			1
 		</div>
@@ -24,7 +25,20 @@ export default {
 		};
 	},
 	onLoad() {},
-	methods: {}
+	onShow() {
+		this.$holdTab.showHoldTab();
+	},
+	onTabEvent(type){
+		console.log(type)
+	},
+	methods: {
+		gotoPage(){
+			uni.navigateTo({
+				url:'/pages/page/page'
+			})
+			this.$holdTab.hideHoldTab();
+		}
+	}
 };
 </script>
 

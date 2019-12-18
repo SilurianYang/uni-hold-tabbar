@@ -36,6 +36,9 @@ export default {
 	onHide() {
 		this.active = false;
 	},
+	onTabEvent(type){
+		console.log(type)
+	},
 	methods: {
 		goToPage(url) {
 			if (!url) return;
