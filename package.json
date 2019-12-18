@@ -1,6 +1,6 @@
 {
   "name": "uni-tabbar-hold",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "uni-app native tabbar blocking plugin",
   "main": "index.js",
   "directories": {
