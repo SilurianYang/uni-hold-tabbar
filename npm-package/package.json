@@ -1,0 +1,38 @@
+{
+  "name": "uni-tabbar-hold",
+  "version": "1.0.0",
+  "description": "uni-app native tabbar blocking plugin",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.7.6",
+    "cross-env": "^6.0.3",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "babel-loader": "^8.0.6",
+    "rimraf": "^3.0.0",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch  --progress --config webpack/webpack.dev.js",
+    "build": "webpack --progress --config webpack/webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilurianYang/uni-tabbar-hold.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilurianYang/uni-tabbar-hold/issues"
+  },
+  "homepage": "https://github.com/SilurianYang/uni-tabbar-hold#readme"
+}
