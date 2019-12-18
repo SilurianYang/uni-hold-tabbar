@@ -11,7 +11,7 @@ const createdTab = function({
 	event,
 	registerPageHook
 }={},tabList) {
-	const  tabbarView = new plus.nativeObj.View(id,style);
+	const tabbarView = new plus.nativeObj.View(id,style);
 	const isHold= beforeMount(tabbarView,tabList);
 	if(!isHold){
 		initAddEvents(event,tabbarView,tabList,registerPageHook);
@@ -20,7 +20,11 @@ const createdTab = function({
 		return tabbarView;
 	}
 }
-
+/**
+ * 初始化入口
+ * @param {*} config 
+ * @param {*} tabList 
+ */
 export const init = function(config,tabList) {
 	return createdTab(config,tabList);
 }

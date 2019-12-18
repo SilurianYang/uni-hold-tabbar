@@ -35,7 +35,6 @@ const callPageHook=function(type,isHook,tab){
 		}
 	}
 }
-
 /**
  * 绑定一些指定的事件
  * @param {Object} event 事假json对象
