@@ -1,10 +1,6 @@
 const path = require("path");
-const rimraf = require("rimraf");
-
-rimraf("dist",()=>{});
 
 const version=process.env.npm_package_version;
-
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -13,7 +9,6 @@ module.exports = {
     library:'HoldTabbar',
     libraryTarget:'umd'
   },
-  mode:"production",
   module: {
     rules: [
       {
