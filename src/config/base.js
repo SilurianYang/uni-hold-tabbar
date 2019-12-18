@@ -8,6 +8,7 @@ export const eventBind={
 }
 
 export const BaseConfig={
+	registerPageHook:false,
 	id:'HoldTabbar',
 	style:{
 		width: '100%',
@@ -17,5 +18,5 @@ export const BaseConfig={
 	},
 	event:{},
 	beforeMount:()=>{},
-	finishMount:()=>{}
+	mounted:()=>{}
 }

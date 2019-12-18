@@ -7,15 +7,16 @@ const createdTab = function({
 	id,
 	style,
 	beforeMount,
-	finishMount,
-	event
+	mounted,
+	event,
+	registerPageHook
 }={},tabList) {
 	const  tabbarView = new plus.nativeObj.View(id,style);
 	const isHold= beforeMount(tabbarView,tabList);
 	if(!isHold){
+		initAddEvents(event,tabbarView,tabList,registerPageHook);
+		mounted(tabbarView,tabList);
 		tabbarView.show();
-		initAddEvents(event,tabbarView,tabList);
-		finishMount(tabbarView,tabList);
 		return tabbarView;
 	}
 }

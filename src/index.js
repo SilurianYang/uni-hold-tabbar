@@ -10,6 +10,12 @@ class HoldTabbar {
 		config = mergeConfig(config);
 		this.tabbarView=init(config,isNext);
 	}
+	get getTabbarView(){
+		return this.tabbarView;
+	}
+	get isVisible(){
+		return this.tabbarView.isVisible();
+	}
 	hideHoldTab(){
 		this.tabbarView.hide();
 	}

@@ -32,3 +32,20 @@ export const assertTabbar=function(){
 		return false
 	}
 }
+/**
+ * 获取当前底部tabbar页面对象
+ * @param {Object} path 当前点击的页面路径
+ */
+export const getActiveTabPage=function(path){
+	const pages= getCurrentPages();
+	if(path==null){
+		return pages[0];
+	}
+	for(let i=0;i<pages.length;i++){
+		const item=pages[i];
+		if(item.route===path){
+			return item
+		}
+	}
+	return false;
+}
