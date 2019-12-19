@@ -154,10 +154,10 @@ const event={
 
 ##### Instance method
 
-* **getTabbarView()**
+* **getTabbarView**
     * 获取当前的底部拦截 tabbar 原生对象，你可以使用他操作些什么  [查阅可用API](http://www.html5plus.org/doc/zh_cn/nativeobj.html#plus.nativeObj.View)
 
-* **isVisible()**
+* **isVisible**
     * 获取当前拦截状态是否显示，即是否在可生效情况下
 
 * **hideHoldTab()**
