@@ -30,6 +30,7 @@ export default {
 	},
 	onTabEvent(type){
 		console.log(type)
+		console.log(this.title)
 	},
 	methods: {
 		gotoPage(){
