@@ -1,7 +1,12 @@
 
+# uni-tabbar-hold
+
+![coverage](https://img.shields.io/badge/coverage%20-95%25-green)   ![npm](https://img.shields.io/badge/npm%20-v2.6.11-blue) ![build](https://img.shields.io/badge/build-passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-red)
+
 ## 写在前面
 
-插件市场有很多的 `tabbar` 相关组件。不管是原生还是普通组件可以说是 `应有尽有`。但是，大家有没有想过一个问题！官方有提供原生的tabbar菜单为何我还要去插件市场引入其他tabbar菜单呢？ 无非就差个拦截，我搞个拦截不就对了。而我为什么要写一个这样的小插件呢？其实它是 [uni-simple-router](https://github.com/SilurianYang/uni-simple-router) 在app端拦截底部菜单的 **垫脚片**。一开始只是单纯的想集成在 `路由` 插件中，想了想单独提取出来更为妥当！**原因**：1.结构分离、管理方便。2.适用于任何人、给予别人可二次开发及使用。3.新插件形式发布。
+插件市场有很多的 `tabbar` 相关组件。不管是原生还是普通组件可以说是 `应有尽有`。但是，大家有没有想过一个问题！官方有提供原生的tabbar菜单为何我还要去插件市场引入其他tabbar菜单呢？ 无非就差个拦截，我搞个拦截不就对了。而我为什么要写一个这样的小插件呢？其实它是 [uni-simple-router](https://github.com/SilurianYang/uni-simple-router) 在app端拦截底部菜单的 **垫脚片**。一开始只是单纯的想集成在 `路由` 插件中，想了想单独提取出来更为妥当！**原因：** 1. 结构分离、管理方便。2.适用于任何人、给予别人可二次开发及使用。 3.新插件形式发布，任何地方集成。
+
 
 ### 安装
 
@@ -146,3 +151,27 @@ const event={
 	touchend:'touchend'
 }
 ```
+
+##### Instance method
+
+* **getTabbarView()**
+    * 获取当前的底部拦截 tabbar 原生对象，你可以使用他操作些什么  [查阅可用API](http://www.html5plus.org/doc/zh_cn/nativeobj.html#plus.nativeObj.View)
+
+* **isVisible()**
+    * 获取当前拦截状态是否显示，即是否在可生效情况下
+
+* **hideHoldTab()**
+    * 隐藏底部拦截层，这个对切换到其他非tabbar页面很有帮助
+
+* **showHoldTab()**
+    * 显示底部拦截层。
+
+### 注意事项
+###### 1. 能直接使用此插件拦截底部tabbar吗？
+* 答：那是必须可以！简单的声明及注册事件即可完成拦截。不过需要注意的是，如果没有合理的管理好页面跳转，拦截器会出现在不该出现的地方。所以说如果单独使用则需要自行判断。如在离开tabbar时手动隐藏拦截器。进入tabbar是显示拦截器。如果是这样闲麻烦，请移步到路由拦截插件 [uni-simple-router](https://github.com/SilurianYang/uni-simple-router) **强烈建议使用路由插件**
+
+###### 2.为什么我切换到其他页面，底部有块不能点击，或者是跳到其他tab页面？
+* 答：没有正确的隐藏和显示底部拦截器。你需要在合适的时候显示和隐藏底部拦截器。 可以查看 `examples` 中的代码
+
+###### 3.我能不能集成此插件到我的插件中？
+* 答：那是必须可以！强烈建议此插件被二次封装。因为是垫片所以很多优秀的功能不会提供，只是简单的完成了最基本的功能。
