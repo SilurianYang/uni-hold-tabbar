@@ -31,7 +31,7 @@ const callPageHook=function(type,isHook,tab){
 		const page=getActiveTabPage(tab.pagePath);
 		if(page){
 			const onTabEvent=page.$vm.$options.onTabEvent;
-			onTabEvent&&onTabEvent(type,tab);
+			onTabEvent&&onTabEvent.call(page.$vm,type,tab);
 		}
 	}
 }
