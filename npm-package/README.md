@@ -1,5 +1,5 @@
 
-# uni-tabbar-hold
+# uni-hold-tabbar
 
 ![coverage](https://img.shields.io/badge/coverage%20-95%25-green)   ![npm](https://img.shields.io/badge/npm%20-v2.6.11-blue) ![build](https://img.shields.io/badge/build-passing-brightgreen) ![license](https://img.shields.io/badge/license-MIT-red)
 
@@ -15,19 +15,19 @@
 ##### Yarn
 
 ```sh
-yarn add uni-tabbar-hold
+yarn add uni-hold-tabbar
 ```
 ##### npm
 
 ```sh
-npm install uni-tabbar-hold
+npm install uni-hold-tabbar
 ```
 
 ### 导入
 
 ##### 包管理
 ````js
-import HoldTabbar  from 'uni-tabbar-hold'
+import HoldTabbar  from 'uni-hold-tabbar'
 
 const holdTab=new HoldTabbar({options}); //可以开始放肆的使用
 ````
@@ -35,16 +35,16 @@ const holdTab=new HoldTabbar({options}); //可以开始放肆的使用
 ##### 插件市场
 ```js
 //换成自己的路径 后面是当前最新的版本号
-import HoldTabbar  from '@/common/tabbar-hold@1.0.0.js' 
+import HoldTabbar  from '@/common/uni-hold-tabbar@1.0.0.js' 
 
 const holdTab=new HoldTabbar({options}); //可以开始放肆的使用
 ```
 ### 入门
-一旦你把 `uni-tabbar-hold` 安装成功后，就可以开始创建相关原生tabbar的拦截配置。对于本指南，完美的示例能带你了解它的所有功能。
+一旦你把 `uni-hold-tabbar` 安装成功后，就可以开始创建相关原生tabbar的拦截配置。对于本指南，完美的示例能带你了解它的所有功能。
 
 ##### 全局生命周期
 ```js
-import HoldTabbar  from 'uni-tabbar-hold'
+import HoldTabbar  from 'uni-hold-tabbar'
 
 //示例化开始使用 
 const holdTab=new HoldTabbar({
@@ -60,7 +60,7 @@ const holdTab=new HoldTabbar({
 
 ##### 手指事件
 ```js
-import HoldTabbar  from 'uni-tabbar-hold'
+import HoldTabbar  from 'uni-hold-tabbar'
 
 //示例化开始使用 拦截tabbar点击事件
 const holdTab=new HoldTabbar({
@@ -89,7 +89,7 @@ const holdTab=new HoldTabbar({
 ##### 为组件注册生命周期
 ```js
 //main.js
-import HoldTabbar  from 'uni-tabbar-hold'
+import HoldTabbar  from 'uni-hold-tabbar'
 
 const holdTab=new HoldTabbar({
     registerPageHook:true,
