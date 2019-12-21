@@ -5,7 +5,7 @@ Vue.config.productionTip = false
 
 App.mpType = 'app'
 
-import HoldTabbar  from '@/common/tabbar-hold-bundle.js'
+import HoldTabbar  from '@/common/uni-hold-tabbar-bundle.js'
 
 Vue.prototype.$holdTab=new HoldTabbar({
 	registerPageHook:true,
