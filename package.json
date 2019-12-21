@@ -1,5 +1,5 @@
 {
-  "name": "uni-tabbar-hold",
+  "name": "uni-hold-tabbar",
   "version": "1.0.0",
   "description": "uni-app native tabbar blocking plugin",
   "main": "index.js",
@@ -26,13 +26,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SilurianYang/uni-tabbar-hold.git"
+    "url": "git+https://github.com/SilurianYang/uni-hold-tabbar.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SilurianYang/uni-tabbar-hold/issues"
+    "url": "https://github.com/SilurianYang/uni-hold-tabbar/issues"
   },
-  "homepage": "https://github.com/SilurianYang/uni-tabbar-hold#readme"
+  "homepage": "https://github.com/SilurianYang/uni-hold-tabbar#readme"
 }
