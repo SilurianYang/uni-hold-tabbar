@@ -6,7 +6,7 @@ const common = require("./webpack.common.js");
 module.exports = merge(common, {
   mode:'development',
   output:{
-    filename: `tabbar-hold-bundle.js`,
+    filename: `uni-hold-tabbar-bundle.js`,
     path: path.resolve(__dirname, '../','examples/common'),
     library:'HoldTabbar',
     libraryTarget:'umd'
